@@ -4,16 +4,16 @@
    * colors
    */
 
-  --rich-black-fogra-29_50: hsl(210, 26%, 11%, 0.5);
-  --rich-black-fogra-29-1: hsl(210, 26%, 11%);
-  --rich-black-fogra-29-2: hsl(210, 50%, 4%);
+  --rich-black-fogra-29_50: hsl(0, 0%, 8%, 0.5);
+  --rich-black-fogra-29-1: hsl(0, 0%, 8%);
+  --rich-black-fogra-29-2: hsl(0, 0%, 3%);
   --silver-metallic: hsl(212, 9%, 67%);
-  --coquelicot_20: hsla(12, 98%, 52%, 0.2);
-  --coquelicot_10: hsla(12, 98%, 52%, 0.1);
+  --coquelicot_20: hsla(21, 77%, 53%, 0.2);
+  --coquelicot_10: hsla(21, 77%, 53%, 0.1);
   --sonic-silver: hsl(0, 0%, 47%);
   --cadet-gray: hsl(214, 15%, 62%);
   --light-gray: hsl(0, 0%, 80%);
-  --coquelicot: hsl(12, 98%, 52%);
+  --coquelicot: hsl(21, 77%, 53%);
   --gainsboro: hsl(0, 0%, 88%);
   --white_20: hsl(0, 0%, 100%, 0.2);
   --white_10: hsl(0, 0%, 100%, 0.1);
@@ -24,8 +24,8 @@
    * typography
    */
 
-  --ff-catamaran: 'Catamaran', sans-serif;
-  --ff-rubik: 'Rubik', sans-serif;
+  --ff-catamaran: 'Barlow Condensed', sans-serif;
+  --ff-rubik: 'Source Sans 3', sans-serif;
 
   --fs-1: 3.8rem;
   --fs-2: 3rem;
@@ -355,17 +355,25 @@ body {
 .logo {
   color: var(--rich-black-fogra-29-1);
   font-family: var(--ff-catamaran);
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: var(--fw-900);
+  font-style: italic;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
-  margin-inline-start: -8px;
+  gap: 6px;
 }
 
 .logo ion-icon {
   color: var(--coquelicot);
-  font-size: 40px;
+  font-size: 32px;
   transform: rotate(90deg) translate(-2px, -5px);
+}
+
+.logo .span {
+  color: var(--coquelicot);
+  font-style: italic;
+  letter-spacing: 3px;
 }
 
 .nav-open-btn {
