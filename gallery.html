@@ -1,387 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - FMA Full Metal Alchemist Fitness</title>
+    <meta
+      name="description"
+      content="Explore our fitness gallery showcasing training sessions, classes, and lifestyle moments at FMA gym."
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - FMA Full Metal Alchemist Fitness</title>
-  <meta name="description"
-    content="Explore our fitness gallery showcasing training sessions, classes, and lifestyle moments at FMA gym.">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/gallery.css" />
 
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Source+Sans+3:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Source+Sans+3:wght@400;500;800&display=swap"
-    rel="stylesheet">
-</head>
-
-<body id="top">
-
-  <!--
+  <body id="top">
+    <!--
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
+    <header class="header" data-header>
+      <div class="container">
+        <a href="./index.html" class="logo">
+          <img
+            src="./assets/images/logo.png"
+            alt="FMA - Full Metal Alchemist Fitness"
+            class="logo-img"
+          />
+        </a>
 
-      <a href="./index.html" class="logo">
-        <img src="./assets/images/logo.png" alt="FMA - Full Metal Alchemist Fitness" class="logo-img">
-      </a>
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="close menu"
+            data-nav-toggler
+          >
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+          </button>
 
-      <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html#home" class="navbar-link" data-nav-link
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="./index.html#about" class="navbar-link" data-nav-link
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="./index.html#class" class="navbar-link" data-nav-link
+                >Classes</a
+              >
+            </li>
+            <li>
+              <a href="./gallery.html" class="navbar-link active" data-nav-link
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="./index.html#contact" class="navbar-link" data-nav-link
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        <a href="#" class="btn btn-secondary" data-modal-open>Join Now</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </button>
+      </div>
+    </header>
 
-        <ul class="navbar-list">
-          <li><a href="./index.html#home" class="navbar-link" data-nav-link>Home</a></li>
-          <li><a href="./index.html#about" class="navbar-link" data-nav-link>About Us</a></li>
-          <li><a href="./index.html#class" class="navbar-link" data-nav-link>Classes</a></li>
-          <li><a href="./gallery.html" class="navbar-link active" data-nav-link>Gallery</a></li>
-          <li><a href="./index.html#contact" class="navbar-link" data-nav-link>Contact Us</a></li>
-        </ul>
-
-      </nav>
-
-      <a href="#" class="btn btn-secondary" data-modal-open>Join Now</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-
-    </div>
-  </header>
-
-
-  <main>
-    <article>
-
-      <!--
+    <main>
+      <article>
+        <!--
         - #PAGE HERO
       -->
 
-      <section class="page-hero bg-dark has-bg-image" aria-label="gallery page hero"
-        style="background-image: url('./assets/images/hero-bg.png')">
-        <div class="container">
+        <section
+          class="page-hero bg-dark has-bg-image"
+          aria-label="gallery page hero"
+          style="background-image: url(&quot;./assets/images/hero-bg.png&quot;)"
+        >
+          <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+              <ol class="breadcrumb-list" style="display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;">
+                <li class="breadcrumb-item" style="display:inline-flex;align-items:center;">
+                  <a href="./index.html" class="breadcrumb-link">Home</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page" style="display:inline-flex;align-items:center;">Gallery</li>
+              </ol>
+            </nav>
 
-          <nav class="breadcrumb" aria-label="breadcrumb">
-            <ol class="breadcrumb-list">
-              <li class="breadcrumb-item">
-                <a href="./index.html" class="breadcrumb-link">Home</a>
-              </li>
-              <li class="breadcrumb-item" aria-current="page">Gallery</li>
-            </ol>
-          </nav>
+            <h1 class="h1 page-hero-title">Our Gallery</h1>
+            <p class="page-hero-text">
+              Moments of strength, dedication &amp; transformation
+            </p>
+          </div>
+        </section>
 
-          <h1 class="h1 page-hero-title">Our Gallery</h1>
-          <p class="page-hero-text">Moments of strength, dedication &amp; transformation</p>
-
-        </div>
-      </section>
-
-
-      <!--
+        <!--
         - #STATS
       -->
 
-      <section class="gallery-stats bg-dark" aria-label="gallery statistics">
-        <div class="container">
-          <ul class="stats-list">
+        <section class="gallery-stats bg-dark" aria-label="gallery statistics">
+          <div class="container">
+            <ul class="stats-list">
+              <li class="stats-item">
+                <strong class="stats-number" data-count="250">250+</strong>
+                <span class="stats-label">Photos</span>
+              </li>
 
-            <li class="stats-item">
-              <strong class="stats-number" data-count="250">250+</strong>
-              <span class="stats-label">Photos</span>
-            </li>
+              <li class="stats-item">
+                <strong class="stats-number" data-count="50">50+</strong>
+                <span class="stats-label">Events</span>
+              </li>
 
-            <li class="stats-item">
-              <strong class="stats-number" data-count="50">50+</strong>
-              <span class="stats-label">Events</span>
-            </li>
+              <li class="stats-item">
+                <strong class="stats-number" data-count="1200">1,200+</strong>
+                <span class="stats-label">Members</span>
+              </li>
 
-            <li class="stats-item">
-              <strong class="stats-number" data-count="1200">1,200+</strong>
-              <span class="stats-label">Members</span>
-            </li>
+              <li class="stats-item">
+                <strong class="stats-number" data-count="15">15+</strong>
+                <span class="stats-label">Programs</span>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-            <li class="stats-item">
-              <strong class="stats-number" data-count="15">15+</strong>
-              <span class="stats-label">Programs</span>
-            </li>
-
-          </ul>
-        </div>
-      </section>
-
-
-      <!--
+        <!--
         - #GALLERY
       -->
 
-      <section class="section gallery-section" aria-label="photo gallery">
-        <div class="container">
+        <section class="section gallery-section" aria-label="photo gallery">
+          <div class="container">
+            <p class="section-subtitle">Our Moments</p>
+            <h2 class="h2 section-title text-center">Fitness In Action</h2>
 
-          <p class="section-subtitle">Our Moments</p>
-          <h2 class="h2 section-title text-center">Fitness In Action</h2>
+            <!-- FILTER BUTTONS -->
+            <div
+              class="gallery-filter"
+              role="group"
+              aria-label="Filter gallery by category"
+            >
+              <button class="filter-btn active" data-filter="all">
+                All Photos
+              </button>
+              <button class="filter-btn" data-filter="training">
+                Training
+              </button>
+              <button class="filter-btn" data-filter="classes">Classes</button>
+              <button class="filter-btn" data-filter="lifestyle">
+                Lifestyle
+              </button>
+            </div>
 
-          <!-- FILTER BUTTONS -->
-          <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
-
-            <button class="filter-btn active" data-filter="all">All Photos</button>
-            <button class="filter-btn" data-filter="training">Training</button>
-            <button class="filter-btn" data-filter="classes">Classes</button>
-            <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
-
+            <!-- GALLERY GRID — populated by gallery-data.js + gallery.js -->
+            <div class="gallery-grid" id="gallery-grid"></div>
           </div>
+        </section>
 
-          <!-- GALLERY GRID — populated by gallery-data.js + gallery.js -->
-          <div class="gallery-grid" id="gallery-grid"></div>
-
-        </div>
-      </section>
-
-
-      <!--
+        <!--
         - #CTA
       -->
 
-      <section class="section gallery-cta bg-dark has-bg-image" aria-label="call to action"
-        style="background-image: url('./assets/images/classes-bg.png')">
-        <div class="container">
-          <div class="gallery-cta-content">
-
-            <p class="section-subtitle">Join Our Community</p>
-            <h2 class="h2 section-title">Ready To Transform Your Life?</h2>
-            <p class="section-text">
-              Be part of our growing fitness family. Get access to world-class training, expert coaches,
-              and a community that pushes you to be your best every single day.
-            </p>
-            <a href="#" class="btn btn-primary" data-modal-open>Get Started Today</a>
-
+        <section
+          class="section gallery-cta bg-dark has-bg-image"
+          aria-label="call to action"
+          style="
+            background-image: url(&quot;./assets/images/classes-bg.png&quot;);
+          "
+        >
+          <div class="container">
+            <div class="gallery-cta-content">
+              <p class="section-subtitle">Join Our Community</p>
+              <h2 class="h2 section-title">Ready To Transform Your Life?</h2>
+              <p class="section-text">
+                Be part of our growing fitness family. Get access to world-class
+                training, expert coaches, and a community that pushes you to be
+                your best every single day.
+              </p>
+              <a href="#" class="btn btn-primary" data-modal-open
+                >Get Started Today</a
+              >
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </article>
+    </main>
 
-    </article>
-  </main>
-
-
-  <!--
+    <!--
     - #FOOTER
   -->
 
-  <footer class="footer">
+    <footer class="footer">
+      <div
+        class="section footer-top bg-dark has-bg-image"
+        style="background-image: url(&quot;./assets/images/footer-bg.png&quot;)"
+      >
+        <div class="container">
+          <div class="footer-brand">
+            <a href="./index.html" class="logo">
+              <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+              <span class="span">FMA</span>
+            </a>
 
-    <div class="section footer-top bg-dark has-bg-image"
-      style="background-image: url('./assets/images/footer-bg.png')">
-      <div class="container">
+            <p class="footer-brand-text">
+              Etiam suscipit fringilla ullamcorper sed malesuada urna nec odio.
+            </p>
 
-        <div class="footer-brand">
-
-          <a href="./index.html" class="logo">
-            <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
-            <span class="span">FMA</span>
-          </a>
-
-          <p class="footer-brand-text">
-            Etiam suscipit fringilla ullamcorper sed malesuada urna nec odio.
-          </p>
-
-          <div class="wrapper">
-            <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
-            <ul class="footer-brand-list">
-              <li>
-                <p class="footer-brand-title">Monday - Friday</p>
-                <p>7:00Am - 10:00Pm</p>
-              </li>
-              <li>
-                <p class="footer-brand-title">Saturday - Sunday</p>
-                <p>7:00Am - 2:00Pm</p>
-              </li>
-            </ul>
+            <div class="wrapper">
+              <img
+                src="./assets/images/footer-clock.png"
+                width="34"
+                height="34"
+                loading="lazy"
+                alt="Clock"
+              />
+              <ul class="footer-brand-list">
+                <li>
+                  <p class="footer-brand-title">Monday - Friday</p>
+                  <p>7:00Am - 10:00Pm</p>
+                </li>
+                <li>
+                  <p class="footer-brand-title">Saturday - Sunday</p>
+                  <p>7:00Am - 2:00Pm</p>
+                </li>
+              </ul>
+            </div>
           </div>
 
+          <ul class="footer-list">
+            <li><p class="footer-list-title has-before">Our Links</p></li>
+            <li><a href="./index.html" class="footer-link">Home</a></li>
+            <li>
+              <a href="./index.html#about" class="footer-link">About Us</a>
+            </li>
+            <li>
+              <a href="./index.html#class" class="footer-link">Classes</a>
+            </li>
+            <li><a href="./gallery.html" class="footer-link">Gallery</a></li>
+            <li>
+              <a href="./index.html#contact" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li><p class="footer-list-title has-before">Contact Us</p></li>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="location" aria-hidden="true"></ion-icon>
+              </div>
+              <address class="address footer-link">
+                4th floor Above Westside shopping mall, opp. to DSR WOODWINDS,
+                Kaikondrahalli, Bengaluru, Karnataka 560035
+              </address>
+            </li>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="call" aria-hidden="true"></ion-icon>
+              </div>
+              <div>
+                <a href="tel:9036914734" class="footer-link">9036914734</a>
+              </div>
+            </li>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="mail" aria-hidden="true"></ion-icon>
+              </div>
+              <div>
+                <a href="mailto:Info.fma2022@gmail.com" class="footer-link"
+                  >Info.fma2022@gmail.com</a
+                >
+              </div>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li><p class="footer-list-title has-before">Our Newsletter</p></li>
+            <li>
+              <form action="" class="footer-form">
+                <input
+                  type="email"
+                  name="email_address"
+                  aria-label="email"
+                  placeholder="Email Address"
+                  required
+                  class="input-field"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  aria-label="Submit"
+                >
+                  <ion-icon
+                    name="chevron-forward-sharp"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </form>
+            </li>
+            <li>
+              <ul class="social-list">
+                <li>
+                  <a href="#" class="social-link"
+                    ><ion-icon name="logo-facebook"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social-link"
+                    ><ion-icon name="logo-instagram"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social-link"
+                    ><ion-icon name="logo-twitter"></ion-icon
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-
-        <ul class="footer-list">
-          <li><p class="footer-list-title has-before">Our Links</p></li>
-          <li><a href="./index.html" class="footer-link">Home</a></li>
-          <li><a href="./index.html#about" class="footer-link">About Us</a></li>
-          <li><a href="./index.html#class" class="footer-link">Classes</a></li>
-          <li><a href="./gallery.html" class="footer-link">Gallery</a></li>
-          <li><a href="./index.html#contact" class="footer-link">Contact Us</a></li>
-        </ul>
-
-        <ul class="footer-list">
-          <li><p class="footer-list-title has-before">Contact Us</p></li>
-          <li class="footer-list-item">
-            <div class="icon"><ion-icon name="location" aria-hidden="true"></ion-icon></div>
-            <address class="address footer-link">4th floor Above Westside shopping mall, opp. to DSR WOODWINDS, Kaikondrahalli, Bengaluru, Karnataka 560035</address>
-          </li>
-          <li class="footer-list-item">
-            <div class="icon"><ion-icon name="call" aria-hidden="true"></ion-icon></div>
-            <div><a href="tel:9036914734" class="footer-link">9036914734</a></div>
-          </li>
-          <li class="footer-list-item">
-            <div class="icon"><ion-icon name="mail" aria-hidden="true"></ion-icon></div>
-            <div>
-              <a href="mailto:Info.fma2022@gmail.com" class="footer-link">Info.fma2022@gmail.com</a>
-            </div>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li><p class="footer-list-title has-before">Our Newsletter</p></li>
-          <li>
-            <form action="" class="footer-form">
-              <input type="email" name="email_address" aria-label="email" placeholder="Email Address" required
-                class="input-field">
-              <button type="submit" class="btn btn-primary" aria-label="Submit">
-                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
-              </button>
-            </form>
-          </li>
-          <li>
-            <ul class="social-list">
-              <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-              <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-              <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-            </ul>
-          </li>
-        </ul>
-
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">
-          &copy; 2022 FMA. All Rights Reserved By
-          <a href="#" class="copyright-link">codewithmdtronix.</a>
-        </p>
-        <ul class="footer-bottom-list">
-          <li><a href="#" class="footer-bottom-link has-before">Privacy Policy</a></li>
-          <li><a href="#" class="footer-bottom-link has-before">Terms &amp; Condition</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2022 FMA. All Rights Reserved By
+            <a href="#" class="copyright-link">codewithmdtronix.</a>
+          </p>
+          <ul class="footer-bottom-list">
+            <li>
+              <a href="#" class="footer-bottom-link has-before"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer-bottom-link has-before"
+                >Terms &amp; Condition</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
 
-  </footer>
-
-
-  <!--
+    <!--
     - #JOIN MODAL
   -->
 
-  <div class="join-modal" id="joinModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
-    <div class="join-modal-overlay" data-modal-close></div>
-    <div class="join-modal-box">
-      <button class="join-modal-close" aria-label="Close" data-modal-close>
-        <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
-      </button>
+    <div
+      class="join-modal"
+      id="joinModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="joinModalTitle"
+    >
+      <div class="join-modal-overlay" data-modal-close></div>
+      <div class="join-modal-box">
+        <button class="join-modal-close" aria-label="Close" data-modal-close>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
 
-      <h2 class="h2 join-modal-title" id="joinModalTitle">Join <span class="span">FMA</span> Now</h2>
-      <p class="join-modal-subtitle">Fill in your details and we'll get back to you!</p>
+        <h2 class="h2 join-modal-title" id="joinModalTitle">
+          Join <span class="span">FMA</span> Now
+        </h2>
+        <p class="join-modal-subtitle">
+          Fill in your details and we'll get back to you!
+        </p>
 
-      <form class="join-modal-form" id="joinForm">
-        <div class="join-modal-field">
-          <label for="joinName" class="join-modal-label">Full Name</label>
-          <input type="text" id="joinName" name="name" placeholder="Enter your full name" required class="join-modal-input" />
+        <form class="join-modal-form" id="joinForm">
+          <div class="join-modal-field">
+            <label for="joinName" class="join-modal-label">Full Name</label>
+            <input
+              type="text"
+              id="joinName"
+              name="name"
+              placeholder="Enter your full name"
+              required
+              class="join-modal-input"
+            />
+          </div>
+
+          <div class="join-modal-field">
+            <label for="joinPhone" class="join-modal-label">Phone Number</label>
+            <input
+              type="tel"
+              id="joinPhone"
+              name="number"
+              placeholder="Enter your phone number"
+              required
+              class="join-modal-input"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary join-modal-submit">
+            Submit
+          </button>
+        </form>
+
+        <div class="join-modal-success" id="joinSuccess" hidden>
+          <ion-icon
+            name="checkmark-circle-outline"
+            aria-hidden="true"
+          ></ion-icon>
+          <p>Thanks! We'll contact you soon.</p>
         </div>
-
-        <div class="join-modal-field">
-          <label for="joinPhone" class="join-modal-label">Phone Number</label>
-          <input type="tel" id="joinPhone" name="number" placeholder="Enter your phone number" required class="join-modal-input" />
-        </div>
-
-        <button type="submit" class="btn btn-primary join-modal-submit">Submit</button>
-      </form>
-
-      <div class="join-modal-success" id="joinSuccess" hidden>
-        <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
-        <p>Thanks! We'll contact you soon.</p>
       </div>
     </div>
-  </div>
 
-
-  <!--
+    <!--
     - #WHATSAPP
   -->
 
-  <a href="https://wa.me/+919036914734" class="whatsapp-btn" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer">
-    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
-  </a>
+    <a
+      href="https://wa.me/+919036914734"
+      class="whatsapp-btn"
+      aria-label="Chat with us on WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+    </a>
 
-
-  <!--
+    <!--
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
-  </a>
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+    </a>
 
-
-  <!--
+    <!--
     - #LIGHTBOX
   -->
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image lightbox"
+      hidden
+    >
+      <div class="lightbox-overlay"></div>
 
-    <div class="lightbox-overlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
 
-    <div class="lightbox-content">
+        <button class="lightbox-prev" aria-label="Previous image">
+          <ion-icon name="chevron-back-sharp" aria-hidden="true"></ion-icon>
+        </button>
 
-      <button class="lightbox-close" aria-label="Close lightbox">
-        <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
-      </button>
+        <button class="lightbox-next" aria-label="Next image">
+          <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
+        </button>
 
-      <button class="lightbox-prev" aria-label="Previous image">
-        <ion-icon name="chevron-back-sharp" aria-hidden="true"></ion-icon>
-      </button>
-
-      <button class="lightbox-next" aria-label="Next image">
-        <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
-      </button>
-
-      <figure class="lightbox-figure">
-        <div class="lightbox-img-wrapper">
-          <img src="" alt="" class="lightbox-img" id="lightbox-img">
-          <div class="lightbox-loader" aria-hidden="true"></div>
-        </div>
-        <figcaption class="lightbox-caption">
-          <span class="lightbox-category" id="lightbox-category"></span>
-          <p class="lightbox-title" id="lightbox-title"></p>
-          <span class="lightbox-counter" id="lightbox-counter"></span>
-        </figcaption>
-      </figure>
-
+        <figure class="lightbox-figure">
+          <div class="lightbox-img-wrapper">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+            <div class="lightbox-loader" aria-hidden="true"></div>
+          </div>
+          <figcaption class="lightbox-caption">
+            <span class="lightbox-category" id="lightbox-category"></span>
+            <p class="lightbox-title" id="lightbox-title"></p>
+            <span class="lightbox-counter" id="lightbox-counter"></span>
+          </figcaption>
+        </figure>
+      </div>
     </div>
 
-  </div>
-
-
-  <!--
+    <!--
     - custom js
   -->
-  <script src="./assets/js/script.js" defer></script>
-  <script src="./assets/js/gallery-data.js" defer></script>
-  <script src="./assets/js/gallery.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/gallery-data.js" defer></script>
+    <script src="./assets/js/gallery.js" defer></script>
 
-  <!--
+    <!--
     - ionicon
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
