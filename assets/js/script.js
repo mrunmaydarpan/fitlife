@@ -81,7 +81,7 @@ if (gymCarousel) {
     setTimeout(() => isAutoScrolling = true, 2000);
   });
 
-  setInterval(() => {
+  setInterval(function() {
     if (!isAutoScrolling) return;
 
     // Calculate halfway point (the start of our cloned items)
@@ -108,3 +108,52 @@ if (gymCarousel) {
     });
   }, 3000);
 }
+
+
+
+/**
+ * Join Now modal
+ */
+
+const joinModal = document.getElementById("joinModal");
+const joinForm  = document.getElementById("joinForm");
+const joinSuccess = document.getElementById("joinSuccess");
+
+const openModal  = function () {
+  joinModal.classList.add("is-open");
+  joinModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+};
+
+const closeModal = function () {
+  joinModal.classList.remove("is-open");
+  joinModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+};
+
+document.querySelectorAll("[data-modal-open]").forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    openModal();
+  });
+});
+
+document.querySelectorAll("[data-modal-close]").forEach(function (el) {
+  el.addEventListener("click", closeModal);
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && joinModal.classList.contains("is-open")) closeModal();
+});
+
+joinForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  joinForm.hidden = true;
+  joinSuccess.hidden = false;
+  setTimeout(function () {
+    joinForm.reset();
+    joinForm.hidden = false;
+    joinSuccess.hidden = true;
+    closeModal();
+  }, 2500);
+});

@@ -80,7 +80,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="btn btn-secondary">Join Now</a>
+        <a href="#" class="btn btn-secondary" data-modal-open>Join Now</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
           <span class="line"></span>
@@ -116,7 +116,7 @@
                 mi, a faucibus nisi eleifend eu.
               </p> -->
 
-              <a href="#" class="btn btn-primary">Get Started</a>
+              <a href="#" class="btn btn-primary" data-modal-open>Get Started</a>
             </div>
 
             <div class="hero-banner">
@@ -725,7 +725,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright">
-            &copy; 2026 FMA. All Rights Reserved By
+            &copy; 2022 FMA. All Rights Reserved By
             <a href="#" class="copyright-link">codewithmdtronix.</a>
           </p>
 
@@ -744,7 +744,56 @@
       </div>
     </footer>
 
-    <!-- 
+    <!--
+    - #JOIN MODAL
+  -->
+
+    <div class="join-modal" id="joinModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+      <div class="join-modal-overlay" data-modal-close></div>
+      <div class="join-modal-box">
+        <button class="join-modal-close" aria-label="Close" data-modal-close>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <h2 class="h2 join-modal-title" id="joinModalTitle">Join <span class="span">FMA</span> Now</h2>
+        <p class="join-modal-subtitle">Fill in your details and we'll get back to you!</p>
+
+        <form class="join-modal-form" id="joinForm">
+          <div class="join-modal-field">
+            <label for="joinName" class="join-modal-label">Full Name</label>
+            <input
+              type="text"
+              id="joinName"
+              name="name"
+              placeholder="Enter your full name"
+              required
+              class="join-modal-input"
+            />
+          </div>
+
+          <div class="join-modal-field">
+            <label for="joinPhone" class="join-modal-label">Phone Number</label>
+            <input
+              type="tel"
+              id="joinPhone"
+              name="number"
+              placeholder="Enter your phone number"
+              required
+              class="join-modal-input"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary join-modal-submit">Submit</button>
+        </form>
+
+        <div class="join-modal-success" id="joinSuccess" hidden>
+          <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+          <p>Thanks! We'll contact you soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--
     - #WHATSAPP
   -->
 
