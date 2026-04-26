@@ -49,7 +49,7 @@
 
       </nav>
 
-      <a href="#" class="btn btn-secondary">Join Now</a>
+      <a href="#" class="btn btn-secondary" data-modal-open>Join Now</a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line"></span>
@@ -163,7 +163,7 @@
               Be part of our growing fitness family. Get access to world-class training, expert coaches,
               and a community that pushes you to be your best every single day.
             </p>
-            <a href="#" class="btn btn-primary">Get Started Today</a>
+            <a href="#" class="btn btn-primary" data-modal-open>Get Started Today</a>
 
           </div>
         </div>
@@ -274,6 +274,51 @@
     </div>
 
   </footer>
+
+
+  <!--
+    - #JOIN MODAL
+  -->
+
+  <div class="join-modal" id="joinModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+    <div class="join-modal-overlay" data-modal-close></div>
+    <div class="join-modal-box">
+      <button class="join-modal-close" aria-label="Close" data-modal-close>
+        <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+      </button>
+
+      <h2 class="h2 join-modal-title" id="joinModalTitle">Join <span class="span">FMA</span> Now</h2>
+      <p class="join-modal-subtitle">Fill in your details and we'll get back to you!</p>
+
+      <form class="join-modal-form" id="joinForm">
+        <div class="join-modal-field">
+          <label for="joinName" class="join-modal-label">Full Name</label>
+          <input type="text" id="joinName" name="name" placeholder="Enter your full name" required class="join-modal-input" />
+        </div>
+
+        <div class="join-modal-field">
+          <label for="joinPhone" class="join-modal-label">Phone Number</label>
+          <input type="tel" id="joinPhone" name="number" placeholder="Enter your phone number" required class="join-modal-input" />
+        </div>
+
+        <button type="submit" class="btn btn-primary join-modal-submit">Submit</button>
+      </form>
+
+      <div class="join-modal-success" id="joinSuccess" hidden>
+        <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+        <p>Thanks! We'll contact you soon.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--
+    - #WHATSAPP
+  -->
+
+  <a href="https://wa.me/+919036914734" class="whatsapp-btn" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer">
+    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+  </a>
 
 
   <!--
