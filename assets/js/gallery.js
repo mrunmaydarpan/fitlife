@@ -2,6 +2,37 @@
 
 (function () {
 
+  // --- Render gallery from data ---
+
+  const grid = document.getElementById('gallery-grid');
+
+  if (grid && typeof GALLERY_ITEMS !== 'undefined') {
+    grid.innerHTML = GALLERY_ITEMS.map(item => {
+      const categoryLabel = item.category.charAt(0).toUpperCase() + item.category.slice(1);
+      return `
+        <div
+          class="gallery-item${item.portrait ? ' portrait' : ''}"
+          data-category="${item.category}"
+          data-title="${item.title}"
+          tabindex="0"
+          role="button"
+          aria-label="View ${item.title}"
+        >
+          <figure class="gallery-img-holder">
+            <img src="${item.image}" alt="${item.alt}" loading="lazy" class="gallery-img" />
+          </figure>
+          <div class="gallery-overlay" aria-hidden="true">
+            <span class="gallery-category">${categoryLabel}</span>
+            <p class="gallery-title">${item.title}</p>
+            <span class="gallery-zoom-icon">
+              <ion-icon name="expand-outline"></ion-icon>
+            </span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
   // --- Elements ---
   const filterBtns   = document.querySelectorAll('[data-filter]');
   const galleryItems = [...document.querySelectorAll('.gallery-item')];

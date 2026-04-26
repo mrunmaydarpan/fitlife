@@ -1,706 +1,735 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMA - Full Metal Alchemist Fitness</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FMA - Full Metal Alchemist Fitness</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Source+Sans+3:wght@400;500;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Source+Sans+3:wght@400;500;800&display=swap"
-    rel="stylesheet">
+    <!---preload images-->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
+    <link rel="preload" as="image" href="./assets/images/hero-circle-one.png" />
+    <link rel="preload" as="image" href="./assets/images/hero-circle-two.png" />
+    <!-- <link rel="preload" as="image" href="./assets/images/heart-rate.svg"> -->
+    <!-- <link rel="preload" as="image" href="./assets/images/calories.svg"> -->
+  </head>
 
-  <!---preload images-->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
-  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
-  <link rel="preload" as="image" href="./assets/images/calories.svg">
-
-</head>
-
-<body id="top">
-
-  <!-- 
+  <body id="top">
+    <!-- 
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
+    <header class="header" data-header>
+      <div class="container">
+        <a href="./index.html" class="logo">
+          <img
+            src="./assets/images/logo.png"
+            alt="FMA - Full Metal Alchemist Fitness"
+            class="logo-img"
+          />
+        </a>
 
-      <a href="./index.html" class="logo">
-        <img src="./assets/images/logo.png" alt="FMA - Full Metal Alchemist Fitness" class="logo-img">
-      </a>
+        <nav class="navbar" data-navbar>
+          <button
+            class="nav-close-btn"
+            aria-label="close menu"
+            data-nav-toggler
+          >
+            <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+          </button>
 
-      <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#home" class="navbar-link active" data-nav-link>Home</a>
+            </li>
 
-        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+
+            <li>
+              <a href="#class" class="navbar-link" data-nav-link>Classes</a>
+            </li>
+
+            <li>
+              <a href="./gallery.html" class="navbar-link" data-nav-link
+                >Gallery</a
+              >
+            </li>
+
+            <!-- <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li> -->
+
+            <li>
+              <a href="#contact" class="navbar-link" data-nav-link
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn btn-secondary">Join Now</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </button>
+      </div>
+    </header>
 
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link active" data-nav-link>Home</a>
-          </li>
-
-          <li>
-            <a href="#about" class="navbar-link" data-nav-link>About Us</a>
-          </li>
-
-          <li>
-            <a href="#class" class="navbar-link" data-nav-link>Classes</a>
-          </li>
-
-          <li>
-            <a href="./gallery.html" class="navbar-link" data-nav-link>Gallery</a>
-          </li>
-
-          <li>
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link" data-nav-link>Contact Us</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <a href="#" class="btn btn-secondary">Join Now</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-
-    </div>
-  </header>
-
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
+    <main>
+      <article>
+        <!-- 
         - #HERO
       -->
 
-      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
-        style="background-image: url('./assets/images/hero-bg.png')">
-        <div class="container">
+        <section
+          class="section hero bg-dark has-after has-bg-image"
+          id="home"
+          aria-label="hero"
+          data-section
+          style="background-image: url(&quot;./assets/images/hero-bg.png&quot;)"
+        >
+          <div class="container">
+            <div class="hero-content">
+              <p class="hero-subtitle">
+                <strong class="strong">The Best</strong>Fitness Club
+              </p>
 
-          <div class="hero-content">
+              <h1 class="h1 hero-title">Work Hard To Get Better Life</h1>
 
-            <p class="hero-subtitle">
-              <strong class="strong">The Best</strong>Fitness Club
-            </p>
+              <!-- <p class="section-text">
+                Duis mollis felis quis libero dictum vehicula. Duis dictum lorem
+                mi, a faucibus nisi eleifend eu.
+              </p> -->
 
-            <h1 class="h1 hero-title">Work Hard To Get Better Life</h1>
+              <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
 
-            <p class="section-text">
-              Duis mollis felis quis libero dictum vehicula. Duis dictum lorem mi, a faucibus nisi eleifend eu.
-            </p>
+            <div class="hero-banner">
+              <img
+                src="./assets/images/hero-banner.png"
+                width="660"
+                height="753"
+                alt="hero banner"
+                class="w-100"
+              />
 
-            <a href="#" class="btn btn-primary">Get Started</a>
+              <img
+                src="./assets/images/hero-circle-one.png"
+                width="666"
+                height="666"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-1"
+              />
+              <img
+                src="./assets/images/hero-circle-two.png"
+                width="666"
+                height="666"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-2"
+              />
 
+              <img
+                src="./assets/images/heart-rate.svg"
+                width="255"
+                height="270"
+                alt="1000 kcal calories burned"
+                class="abs-img abs-img-1"
+              />
+              <img
+                src="./assets/images/calories.svg"
+                width="348"
+                height="224"
+                alt="calories"
+                class="abs-img abs-img-2"
+              />
+            </div>
           </div>
+        </section>
 
-          <div class="hero-banner">
-
-            <img src="./assets/images/hero-banner.png" width="660" height="753" alt="hero banner" class="w-100">
-
-            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
-              class="circle circle-1">
-            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
-              class="circle circle-2">
-
-            <img src="./assets/images/heart-rate.svg" width="255" height="270" alt="1000 kcal calories burned"
-              class="abs-img abs-img-1">
-            <img src="./assets/images/calories.svg" width="348" height="224" alt="calories" class="abs-img abs-img-2">
-
-          </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #ABOUT
       -->
 
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
+        <section class="section about" id="about" aria-label="about">
+          <div class="container">
+            <div class="about-banner has-after">
+              <img
+                src="./assets/images/about-banner.png"
+                width="660"
+                height="648"
+                loading="lazy"
+                alt="about banner"
+                class="w-100"
+              />
 
-          <div class="about-banner has-after">
-            <img src="./assets/images/about-banner.png" width="660" height="648" loading="lazy" alt="about banner"
-              class="w-100">
+              <img
+                src="./assets/images/about-circle-one.png"
+                width="660"
+                height="534"
+                loading="lazy"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-1"
+              />
+              <img
+                src="./assets/images/about-circle-two.png"
+                width="660"
+                height="534"
+                loading="lazy"
+                aria-hidden="true"
+                alt=""
+                class="circle circle-2"
+              />
 
-            <img src="./assets/images/about-circle-one.png" width="660" height="534" loading="lazy" aria-hidden="true"
-              alt="" class="circle circle-1">
-            <img src="./assets/images/about-circle-two.png" width="660" height="534" loading="lazy" aria-hidden="true"
-              alt="" class="circle circle-2">
-
-            <img src="./assets/images/fitness.png" width="650" height="154" loading="lazy" alt="fitness"
-              class="abs-img w-100">
-          </div>
-
-          <div class="about-content">
-
-            <p class="section-subtitle">About Us</p>
-
-            <h2 class="h2 section-title">Welcome To Our Fitness Gym</h2>
-
-            <p class="section-text">
-              Nam ut hendrerit leo. Aenean vel ipsum nunc. Curabitur in tellus vitae nisi aliquet dapibus non et erat.
-              Pellentesque
-              porta sapien non accumsan dignissim curabitur sagittis nulla sit amet dolor feugiat.
-            </p>
-
-            <p class="section-text">
-              Integer placerat vitae metus posuere tincidunt. Nullam suscipit ante ac aliquet viverra vestibulum ante
-              ipsum primis.
-            </p>
-
-            <div class="wrapper">
-
-              <div class="about-coach">
-
-                <figure class="coach-avatar">
-                  <img src="./assets/images/about-coach.jpg" width="65" height="65" loading="lazy" alt="Trainer">
-                </figure>
-
-                <div>
-                  <h3 class="h3 coach-name">Prayas Nayak</h3>
-
-                  <p class="coach-title">Our Coach</p>
-                </div>
-
-              </div>
-
-              <a href="#" class="btn btn-primary">Explore More</a>
-
+              <img
+                src="./assets/images/fitness.png"
+                width="650"
+                height="154"
+                loading="lazy"
+                alt="fitness"
+                class="abs-img w-100"
+              />
             </div>
 
+            <div class="about-content">
+              <p class="section-subtitle">About Us</p>
+
+              <h2 class="h2 section-title">
+                Welcome to Full Metal Alchemist — where strength meets purpose.
+              </h2>
+
+              <p class="section-text">
+                This isn’t just a gym; it’s a space built for transformation.
+                Whether you’re stepping in for the first time or pushing toward
+                your next level, we’re here to guide, challenge, and support you
+                every step of the way.
+              </p>
+
+              <p class="section-text">
+                At Full Metal Alchemist, we focus on real results — combining
+                structured training, functional strength, and a supportive
+                community that keeps you accountable. From fat loss and muscle
+                building to overall fitness and confidence, your goals become
+                our mission.
+              </p>
+
+              <p class="section-text">
+                Train hard. Stay consistent. Become your strongest self.
+              </p>
+            </div>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #VIDEO
       -->
 
-      <section class="section video" aria-label="video">
-        <div class="container">
+        <section class="section video" aria-label="video">
+          <div class="container">
+            <div
+              class="video-card has-before has-bg-image"
+              style="
+                background-image: url(&quot;./assets/images/video-banner.jpg&quot;);
+              "
+            >
+              <h2 class="h2 card-title">Explore Fitness Life</h2>
 
-          <div class="video-card has-before has-bg-image"
-            style="background-image: url('./assets/images/video-banner.jpg')">
+              <button class="play-btn" aria-label="play video">
+                <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
+              </button>
 
-            <h2 class="h2 card-title">Explore Fitness Life</h2>
-
-            <button class="play-btn" aria-label="play video">
-              <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
-            </button>
-
-            <a href="#" class="btn-link has-before">Watch More</a>
-
+              <a href="#" class="btn-link has-before">Watch More</a>
+            </div>
           </div>
+        </section>
 
-        </div>
-      </section>
+        <!-- 
+        - #GYM INTERIOR
+      -->
 
+        <section
+          class="section gym-interior"
+          id="gym-interior"
+          aria-label="gym-interior"
+        >
+          <div class="container">
+            <!-- <p class="section-subtitle">Our Environment</p> -->
 
+            <h2 class="h2 section-title text-center">Explore Our Gym</h2>
 
+            <ul
+              class="has-scrollbar"
+              id="gym-interior-carousel"
+              style="
+                display: flex;
+                gap: 30px;
+                overflow-x: auto;
+                padding-bottom: 20px;
+                scroll-snap-type: inline mandatory;
+                list-style: none;
+              "
+            >
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.19 PM.jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 1"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
 
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.20 PM (1).jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 2"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
 
-      <!-- 
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.20 PM (2).jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 3"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.20 PM.jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 4"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.21 PM (1).jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 5"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.21 PM (2).jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 6"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.21 PM.jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 7"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  class="img-holder"
+                  style="
+                    --width: 800;
+                    --height: 500;
+                    border-radius: 10px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src="./assets/gym interior/WhatsApp Image 2026-04-25 at 7.52.22 PM (1).jpeg"
+                    width="800"
+                    height="500"
+                    loading="lazy"
+                    alt="Gym Interior 8"
+                    class="img-cover"
+                  />
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
         - #CLASS
       -->
 
-      <section class="section class bg-dark has-bg-image" id="class" aria-label="class"
-        style="background-image: url('./assets/images/classes-bg.png')">
-        <div class="container">
-
-          <p class="section-subtitle">Our Classes</p>
-
-          <h2 class="h2 section-title text-center">Fitness Classes For Every Goal</h2>
-
-          <ul class="class-list has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="class-card">
-
-                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                  <img src="./assets/images/class-1.jpg" width="416" height="240" loading="lazy" alt="Weight Lifting"
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="title-wrapper">
-                    <img src="./assets/images/class-icon-1.png" width="52" height="52" aria-hidden="true" alt=""
-                      class="title-icon">
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title">Weight Lifting</a>
-                    </h3>
-                  </div>
-
-                  <p class="card-text">
-                    Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                  </p>
-
-                  <div class="card-progress">
-
-                    <div class="progress-wrapper">
-                      <p class="progress-label">Class Full</p>
-
-                      <span class="progress-value">85%</span>
-                    </div>
-
-                    <div class="progress-bg">
-                      <div class="progress-bar" style="width: 85%"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="class-card">
-
-                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                  <img src="./assets/images/class-2.jpg" width="416" height="240" loading="lazy" alt="Cardio & Strenght"
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="title-wrapper">
-                    <img src="./assets/images/class-icon-2.png" width="52" height="52" aria-hidden="true" alt=""
-                      class="title-icon">
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title">Cardio & Strenght</a>
-                    </h3>
-                  </div>
-
-                  <p class="card-text">
-                    Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                  </p>
-
-                  <div class="card-progress">
-
-                    <div class="progress-wrapper">
-                      <p class="progress-label">Class Full</p>
-
-                      <span class="progress-value">70%</span>
-                    </div>
-
-                    <div class="progress-bg">
-                      <div class="progress-bar" style="width: 70%"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="class-card">
-
-                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                  <img src="./assets/images/class-3.jpg" width="416" height="240" loading="lazy" alt="Power Yoga"
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="title-wrapper">
-                    <img src="./assets/images/class-icon-3.png" width="52" height="52" aria-hidden="true" alt=""
-                      class="title-icon">
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title">Power Yoga</a>
-                    </h3>
-                  </div>
-
-                  <p class="card-text">
-                    Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                  </p>
-
-                  <div class="card-progress">
-
-                    <div class="progress-wrapper">
-                      <p class="progress-label">Class Full</p>
-
-                      <span class="progress-value">90%</span>
-                    </div>
-
-                    <div class="progress-bg">
-                      <div class="progress-bar" style="width: 90%"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="class-card">
-
-                <figure class="card-banner img-holder" style="--width: 416; --height: 240;">
-                  <img src="./assets/images/class-4.jpg" width="416" height="240" loading="lazy" alt="The Fitness Pack"
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="title-wrapper">
-                    <img src="./assets/images/class-icon-4.png" width="52" height="52" aria-hidden="true" alt=""
-                      class="title-icon">
-
-                    <h3 class="h3">
-                      <a href="#" class="card-title">The Fitness Pack</a>
-                    </h3>
-                  </div>
-
-                  <p class="card-text">
-                    Suspendisse nisi libero, cursus ac magna sit amet, fermentum imperdiet nisi.
-                  </p>
-
-                  <div class="card-progress">
-
-                    <div class="progress-wrapper">
-                      <p class="progress-label">Class Full</p>
-
-                      <span class="progress-value">60%</span>
-                    </div>
-
-                    <div class="progress-bg">
-                      <div class="progress-bar" style="width: 60%"></div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog" id="blog" aria-label="blog">
-        <div class="container">
-
-          <p class="section-subtitle">Our News</p>
-
-          <h2 class="h2 section-title text-center">Latest Blog Feed</h2>
-
-          <ul class="blog-list has-scrollbar">
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-1.jpg" width="440" height="270" loading="lazy"
-                    alt="Going to the gym for the first time" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Going to the gym for the first time</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-2.jpg" width="440" height="270" loading="lazy"
-                    alt="Parturient accumsan cacus pulvinar magna" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Parturient accumsan cacus pulvinar magna</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="blog-card">
-
-                <div class="card-banner img-holder" style="--width: 440; --height: 270;">
-                  <img src="./assets/images/blog-3.jpg" width="440" height="270" loading="lazy"
-                    alt="Risus purus namien parturient accumsan cacus" class="img-cover">
-
-                  <time class="card-meta" datetime="2022-07-07">7 July 2022</time>
-                </div>
-
-                <div class="card-content">
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Risus purus namien parturient accumsan cacus</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Praesent id ipsum pellentesque lectus dapibus condimentum curabitur eget risus quam. In hac
-                    habitasse platea dictumst.
-                  </p>
-
-                  <a href="#" class="btn-link has-before">Read More</a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
+        <section
+          class="section class bg-dark has-bg-image"
+          id="class"
+          aria-label="class"
+          style="
+            background-image: url(&quot;./assets/images/classes-bg.png&quot;);
+          "
+        >
+          <div class="container">
+            <p class="section-subtitle">Our Classes</p>
+
+            <h2 class="h2 section-title text-center">
+              Fitness Classes For Every Goal
+            </h2>
+
+            <ul class="class-list has-scrollbar">
+              <li class="scrollbar-item">
+                <class-card
+                  title="Weight Lifting"
+                  image="./assets/images/class-1.jpg"
+                  icon="./assets/images/class-icon-1.png"
+                >
+                  Build muscle mass, increase your strength, and tone your body
+                  with our expert-guided weight lifting sessions.
+                </class-card>
+              </li>
+
+              <li class="scrollbar-item">
+                <class-card
+                  title="Cardio & Strenght"
+                  image="./assets/images/class-2.jpg"
+                  icon="./assets/images/class-icon-2.png"
+                >
+                  Boost your endurance and build functional power with a dynamic
+                  mix of cardiovascular and strength training.
+                </class-card>
+              </li>
+
+              <li class="scrollbar-item">
+                <class-card
+                  title="Power Yoga"
+                  image="./assets/images/class-3.jpg"
+                  icon="./assets/images/class-icon-3.png"
+                >
+                  Enhance your flexibility, balance, and core strength through
+                  our revitalizing and focused yoga routines.
+                </class-card>
+              </li>
+
+              <li class="scrollbar-item">
+                <class-card
+                  title="The Fitness Pack"
+                  image="./assets/images/class-4.jpg"
+                  icon="./assets/images/class-icon-4.png"
+                >
+                  Experience a comprehensive full-body workout designed to
+                  maximize your overall health and fitness levels.
+                </class-card>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
+    <footer class="footer" id="contact">
+      <div
+        class="section footer-top bg-dark has-bg-image"
+        style="background-image: url(&quot;./assets/images/footer-bg.png&quot;)"
+      >
+        <div class="container">
+          <div class="footer-brand">
+            <a href="./index.html" class="logo">
+              <img
+                src="./assets/images/logo.png"
+                alt="FMA - Full Metal Alchemist Fitness"
+                class="logo-img logo-img--footer"
+              />
+            </a>
 
-    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
-      <div class="container">
+            <p class="footer-brand-text"></p>
 
-        <div class="footer-brand">
+            <div class="wrapper">
+              <img
+                src="./assets/images/footer-clock.png"
+                width="34"
+                height="34"
+                loading="lazy"
+                alt="Clock"
+              />
 
-          <a href="./index.html" class="logo">
-            <img src="./assets/images/logo.png" alt="FMA - Full Metal Alchemist Fitness" class="logo-img logo-img--footer">
-          </a>
+              <ul class="footer-brand-list">
+                <li>
+                  <p class="footer-brand-title">Monday - Friday</p>
 
-          <p class="footer-brand-text">
-            Etiam suscipit fringilla ullamcorper sed malesuada urna nec odio.
-          </p>
+                  <p>5:30Am - 2:00Am</p>
+                </li>
 
-          <div class="wrapper">
+                <li>
+                  <p class="footer-brand-title">Saturday</p>
+                  <p>5:30Am - 11:00Pm</p>
+                </li>
 
-            <img src="./assets/images/footer-clock.png" width="34" height="34" loading="lazy" alt="Clock">
-
-            <ul class="footer-brand-list">
-
-              <li>
-                <p class="footer-brand-title">Monday - Friday</p>
-
-                <p>7:00Am - 10:00Pm</p>
-              </li>
-
-              <li>
-                <p class="footer-brand-title">Saturday - Sunday</p>
-
-                <p>7:00Am - 2:00Pm</p>
-              </li>
-
-            </ul>
-
+                <li>
+                  <p class="footer-brand-title">Sunday</p>
+                  <p>7:00Am - 9:00Pm</p>
+                </li>
+              </ul>
+            </div>
           </div>
 
-        </div>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Our Links</p>
+            </li>
 
-        <ul class="footer-list">
+            <li>
+              <a href="#" class="footer-link">Home</a>
+            </li>
 
-          <li>
-            <p class="footer-list-title has-before">Our Links</p>
-          </li>
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Home</a>
-          </li>
+            <li>
+              <a href="#" class="footer-link">Classes</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">About Us</a>
-          </li>
+            <li>
+              <a href="./gallery.html" class="footer-link">Gallery</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Classes</a>
-          </li>
+            <li>
+              <a href="#contact" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
 
-          <li>
-            <a href="./gallery.html" class="footer-link">Gallery</a>
-          </li>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Contact Us</p>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Blog</a>
-          </li>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="location" aria-hidden="true"></ion-icon>
+              </div>
 
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
+              <address class="address footer-link">
+                4th floor Above Westside shopping mall, opp. to DSR WOODWINDS,
+                Kaikondrahalli, Bengaluru, Karnataka 560035
+              </address>
+            </li>
 
-        </ul>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="call" aria-hidden="true"></ion-icon>
+              </div>
 
-        <ul class="footer-list">
+              <div>
+                <a href="tel:9036914734" class="footer-link">9036914734</a>
+              </div>
+            </li>
 
-          <li>
-            <p class="footer-list-title has-before">Contact Us</p>
-          </li>
+            <li class="footer-list-item">
+              <div class="icon">
+                <ion-icon name="mail" aria-hidden="true"></ion-icon>
+              </div>
 
-          <li class="footer-list-item">
-            <div class="icon">
-              <ion-icon name="location" aria-hidden="true"></ion-icon>
-            </div>
+              <div>
+                <a href="mailto:info@FMA.com" class="footer-link"
+                  >Info.fma2022@gmail.com</a
+                >
+              </div>
+            </li>
+          </ul>
 
-            <address class="address footer-link">
-             bhubaneswar, odisha, india - 751002
-            </address>
-          </li>
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title has-before">Our Newsletter</p>
+            </li>
 
-          <li class="footer-list-item">
-            <div class="icon">
-              <ion-icon name="call" aria-hidden="true"></ion-icon>
-            </div>
+            <li>
+              <form action="" class="footer-form">
+                <input
+                  type="email"
+                  name="email_address"
+                  aria-label="email"
+                  placeholder="Email Address"
+                  required
+                  class="input-field"
+                />
 
-            <div>
-              <a href="tel:+918599822408" class="footer-link">+91 8599822408</a>
-            </div>
-          </li>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  aria-label="Submit"
+                >
+                  <ion-icon
+                    name="chevron-forward-sharp"
+                    aria-hidden="true"
+                  ></ion-icon>
+                </button>
+              </form>
+            </li>
 
-          <li class="footer-list-item">
-            <div class="icon">
-              <ion-icon name="mail" aria-hidden="true"></ion-icon>
-            </div>
+            <li>
+              <ul class="social-list">
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
 
-            <div>
-              <a href="mailto:info@FMA.com" class="footer-link">info@FMA.com</a>
+                <li>
+                  <a
+                    href="https://www.instagram.com/fma_fullmetalalchemist/"
+                    class="social-link"
+                  >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
 
-              <a href="mailto:services@FMA.com" class="footer-link">services@FMA.com</a>
-            </div>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title has-before">Our Newsletter</p>
-          </li>
-
-          <li>
-            <form action="" class="footer-form">
-              <input type="email" name="email_address" aria-label="email" placeholder="Email Address" required
-                class="input-field">
-
-              <button type="submit" class="btn btn-primary" aria-label="Submit">
-                <ion-icon name="chevron-forward-sharp" aria-hidden="true"></ion-icon>
-              </button>
-            </form>
-          </li>
-
-          <li>
-            <ul class="social-list">
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <li>
+                <!-- <li>
                 <a href="#" class="social-link">
                   <ion-icon name="logo-twitter"></ion-icon>
                 </a>
-              </li>
-
-            </ul>
-          </li>
-
-        </ul>
-
+              </li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="container">
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2026 FMA. All Rights Reserved By
+            <a href="#" class="copyright-link">codewithmdtronix.</a>
+          </p>
 
-        <p class="copyright">
-          &copy; 2022 FMA. All Rights Reserved By <a href="#" class="copyright-link">codewithmdtronix.</a>
-        </p>
-
-        <ul class="footer-bottom-list">
+          <!-- <ul class="footer-bottom-list">
 
           <li>
             <a href="#" class="footer-bottom-link has-before">Privacy Policy</a>
@@ -710,40 +739,54 @@
             <a href="#" class="footer-bottom-link has-before">Terms & Condition</a>
           </li>
 
-        </ul>
-
+        </ul> -->
+        </div>
       </div>
-    </div>
+    </footer>
 
-  </footer>
+    <!-- 
+    - #WHATSAPP
+  -->
 
+    <a
+      href="https://wa.me/+919036914734"
+      class="whatsapp-btn"
+      aria-label="Chat with us on WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+    </a>
 
-
-
-
-  <!-- 
+    <!-- 
     - #BACK TO TOP
   -->
 
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
-  </a>
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+    </a>
 
-
-
-
-
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/components.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 
-  <!-- 
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

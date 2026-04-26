@@ -52,3 +52,59 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+
+/**
+ * Auto-scroll for gym interior carousel (Infinite)
+ */
+
+const gymCarousel = document.getElementById("gym-interior-carousel");
+
+if (gymCarousel) {
+  let isAutoScrolling = true;
+
+  // Duplicate items for infinite scroll effect
+  const items = Array.from(gymCarousel.children);
+  items.forEach(item => {
+    const clone = item.cloneNode(true);
+    gymCarousel.appendChild(clone);
+  });
+
+  // Pause scrolling on hover
+  gymCarousel.addEventListener("mouseenter", () => isAutoScrolling = false);
+  gymCarousel.addEventListener("mouseleave", () => isAutoScrolling = true);
+  
+  // Pause on touch (for mobile)
+  gymCarousel.addEventListener("touchstart", () => isAutoScrolling = false);
+  gymCarousel.addEventListener("touchend", () => {
+    setTimeout(() => isAutoScrolling = true, 2000);
+  });
+
+  setInterval(() => {
+    if (!isAutoScrolling) return;
+
+    // Calculate halfway point (the start of our cloned items)
+    // We add gap * number of items to make it accurate
+    const halfScrollWidth = gymCarousel.scrollWidth / 2;
+
+    // If we've scrolled into the cloned set, jump back to the original set silently
+    if (gymCarousel.scrollLeft >= halfScrollWidth - gymCarousel.clientWidth) {
+      gymCarousel.style.scrollSnapType = 'none'; // Temporarily disable snapping to prevent glitches
+      gymCarousel.scrollBy({
+        left: -halfScrollWidth,
+        behavior: "instant"
+      });
+      // Force reflow
+      gymCarousel.offsetHeight;
+      gymCarousel.style.scrollSnapType = 'inline mandatory';
+    }
+
+    // Scroll to next item
+    const scrollAmount = gymCarousel.clientWidth * 0.8 + 30; 
+    gymCarousel.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth"
+    });
+  }, 3000);
+}
