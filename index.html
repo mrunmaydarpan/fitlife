@@ -116,7 +116,9 @@
                 mi, a faucibus nisi eleifend eu.
               </p> -->
 
-              <a href="#" class="btn btn-primary" data-modal-open>Get Started</a>
+              <a href="#" class="btn btn-primary" data-modal-open
+                >Get Started</a
+              >
             </div>
 
             <div class="hero-banner">
@@ -237,26 +239,106 @@
           </div>
         </section>
 
-        <!-- 
+        <!--
         - #VIDEO
       -->
 
-        <section class="section video" aria-label="video">
+        <section class="section video" aria-label="video" id="videos">
           <div class="container">
-            <div
-              class="video-card has-before has-bg-image"
+            <h2 class="h2 section-title text-center">See Us In Action</h2>
+
+            <ul
+              class="has-scrollbar"
               style="
-                background-image: url(&quot;./assets/images/video-banner.jpg&quot;);
+                display: flex;
+                gap: 30px;
+                overflow-x: auto;
+                padding-bottom: 20px;
+                scroll-snap-type: inline mandatory;
+                list-style: none;
               "
             >
-              <h2 class="h2 card-title">Explore Fitness Life</h2>
-
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
-              </button>
-
-              <a href="#" class="btn-link has-before">Watch More</a>
-            </div>
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin: 0;
+                    background: #000;
+                  "
+                >
+                  <video
+                    controls
+                    preload="metadata"
+                    style="
+                      width: 100%;
+                      display: block;
+                      max-height: 500px;
+                      object-fit: cover;
+                    "
+                  >
+                    <source
+                      src="./assets/videos/Get Fit- Achieve Your Fitness Goals at the Gym. Going to the gym is a popular way to improve one.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </figure>
+                <p
+                  style="
+                    text-align: center;
+                    margin-top: 12px;
+                    color: var(--white);
+                    font-size: 1.4rem;
+                  "
+                >
+                  Get Fit — Achieve Your Fitness Goals
+                </p>
+              </li>
+              <li
+                class="scrollbar-item"
+                style="min-width: 80%; scroll-snap-align: center"
+              >
+                <figure
+                  style="
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin: 0;
+                    background: #000;
+                  "
+                >
+                  <video
+                    controls
+                    preload="metadata"
+                    style="
+                      width: 100%;
+                      display: block;
+                      max-height: 500px;
+                      object-fit: cover;
+                    "
+                  >
+                    <source
+                      src="./assets/videos/Forge your strength with the best—Full Metal Alchemist Gym on Sarjapura Road. Certified trainers.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </figure>
+                <p
+                  style="
+                    text-align: center;
+                    margin-top: 12px;
+                    color: var(--white);
+                    font-size: 1.4rem;
+                  "
+                >
+                  Forge Your Strength — FMA Gym, Sarjapura Road
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -748,15 +830,26 @@
     - #JOIN MODAL
   -->
 
-    <div class="join-modal" id="joinModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+    <div
+      class="join-modal"
+      id="joinModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="joinModalTitle"
+    >
       <div class="join-modal-overlay" data-modal-close></div>
       <div class="join-modal-box">
         <button class="join-modal-close" aria-label="Close" data-modal-close>
           <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
         </button>
 
-        <h2 class="h2 join-modal-title" id="joinModalTitle">Join <span class="span">FMA</span> Now</h2>
-        <p class="join-modal-subtitle">Fill in your details and we'll get back to you!</p>
+        <h2 class="h2 join-modal-title" id="joinModalTitle">
+          Join <span class="span">FMA</span> Now
+        </h2>
+        <p class="join-modal-subtitle">
+          Fill in your details and we'll get back to you!
+        </p>
 
         <form class="join-modal-form" id="joinForm">
           <div class="join-modal-field">
@@ -783,11 +876,16 @@
             />
           </div>
 
-          <button type="submit" class="btn btn-primary join-modal-submit">Submit</button>
+          <button type="submit" class="btn btn-primary join-modal-submit">
+            Submit
+          </button>
         </form>
 
         <div class="join-modal-success" id="joinSuccess" hidden>
-          <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+          <ion-icon
+            name="checkmark-circle-outline"
+            aria-hidden="true"
+          ></ion-icon>
           <p>Thanks! We'll contact you soon.</p>
         </div>
       </div>

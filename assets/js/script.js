@@ -157,3 +157,29 @@ joinForm.addEventListener("submit", function (e) {
     closeModal();
   }, 2500);
 });
+
+
+
+/**
+ * Autoplay videos when they scroll into view, pause when they leave
+ */
+
+const sectionVideos = document.querySelectorAll("#videos video");
+
+if (sectionVideos.length) {
+  const videoObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.muted = true;
+        video.play().catch(function () {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sectionVideos.forEach(function (video) {
+    videoObserver.observe(video);
+  });
+}
