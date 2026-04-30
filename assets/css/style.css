@@ -793,6 +793,45 @@ body {
 
 
 /*-----------------------------------*\
+  #TEAM
+\*-----------------------------------*/
+
+.team-list { margin-block-end: -30px; }
+
+.team-card {
+  background-color: var(--white);
+  border-radius: var(--radius-10);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+  max-width: 240px;
+  margin-inline: auto;
+}
+
+.team-card:is(:hover, :focus-within) {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-2);
+}
+
+.team-card .card-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.team-card .card-subtitle {
+  color: var(--coquelicot);
+  font-family: var(--ff-catamaran);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  font-size: var(--fs-6);
+  margin-block-start: 5px;
+}
+
+
+
+
+
+/*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
@@ -1571,5 +1610,3 @@ body {
 }
 
 .join-modal-success ion-icon { font-size: 4rem; }
-
-}

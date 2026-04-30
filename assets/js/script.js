@@ -183,3 +183,49 @@ if (sectionVideos.length) {
     videoObserver.observe(video);
   });
 }
+
+
+
+/**
+ * Fetch Team Data from Google Sheets
+ */
+
+const teamList = document.getElementById("team-list");
+const sheetID = "1e6nyWc-EUWDpEO3Rbht5ZVelU7AX5wob-t5PZ5wONts";
+const fetchTeam = async function () {
+  if (!teamList) return;
+
+  try {
+    const response = await fetch(`https://opensheet.elk.sh/${sheetID}/Sheet1`);
+    const data = await response.json();
+    console.log(data);
+    if (data.length > 0) {
+      teamList.innerHTML = ""; // Clear loading state
+
+      data.forEach(member => {
+        const li = document.createElement("li");
+        li.classList.add("scrollbar-item");
+
+        li.innerHTML = `
+          <div class="team-card">
+            <figure class="card-banner img-holder" style="--width: 240; --height: 320">
+              <img src="${member.Photo}" width="240" height="320" loading="lazy" alt="${member.Name}" class="img-cover">
+            </figure>
+
+            <div class="card-content">
+              <h3 class="h3 card-title">${member.Name}</h3>
+              <p class="card-subtitle">${member.Title}</p>
+            </div>
+          </div>
+        `;
+
+        teamList.appendChild(li);
+      });
+    }
+  } catch (error) {
+    console.error("Error fetching team data:", error);
+    teamList.innerHTML = `<p class="section-text text-center">Failed to load team data. Please try again later.</p>`;
+  }
+}
+
+fetchTeam();
